@@ -18,7 +18,7 @@
                             <img src="./resources/images/square.png" alt="">
                         </div>
                         <div class="countdown" id="countdown"></div>
-                        <p class="dias">&nbsp;&nbsp; DÍAS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    HORAS &nbsp;&nbsp; MINUTOS &nbsp; SEGUNDOS</p>
+                        <p class="dias">DÍAS &nbsp;&nbsp;&nbsp;    HORAS &nbsp; MINUTOS &nbsp;&nbsp;&nbsp; SEGS.</p>
                     </div>
                 </div>
             </div>
@@ -192,9 +192,9 @@
           
           // Mostrar la cuenta regresiva en el elemento con el ID "countdown"
           document.getElementById('countdown').innerHTML = `
+               
             ${days} 
-            ${hours < 10 ? '0' : ''}${hours} ${minutes < 10 ? '0' : ''}${minutes} ${seconds < 10 ? '0' : ''}${seconds}
-          `;
+            ${hours < 10 ? '0' : ''}${hours} ${minutes < 10 ? '0' : ''}${minutes} ${seconds < 10 ? '0' : ''}${seconds}`;
           
           // Si la cuenta regresiva llega a cero, detener el temporizador
           if (difference < 0) {
