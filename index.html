@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nuestra boda</title>
     <link rel="stylesheet" href="./resources/styles/app.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
     <audio autoplay loop>
-        <source src="https://myrepo-aw.github.io/boda-miguel-y-adabel/resources/mp3/brillas.mp3" type="audio/mpeg">
+        <source src="https://guanajuato.vip/resources/brillas.mp3" type="audio/mpeg">
     </audio>
 
     <main>
-        <div class="container">
+        <div class="d-none d-md-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center text-center mx-auto">
+                            <img src="./resources/images/A.jpg" alt="" class="d-block" style="width: 50%; object-fit: contain; max-height: 400px;">
+                            <h1 class="d-inline-block">PARA PODER VER ÉSTA INVITACIÓN DIGITAL POR FAVOR ESCANEE EL CÓDIGO QR CON SU CELULAR</h1>
+                            <img src="./resources/images/qr.png" alt="" class="d-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-block d-md-none">
             <div class="row">
                 <div class="col-12 ps-0 pe-0">
                     <div class="background">
@@ -140,7 +154,7 @@
     <button class="d-none" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Abrir Modal</button>
 
 
-    <footer class="mt-2"></footer>
+    <footer class="d-block d-md-none mt-2"></footer>
 
 
     <!-- Modal OK -->
@@ -176,37 +190,30 @@
 
     <!-- Cuenta regresiva -->
 
-    <script>
-        // Definir la fecha objetivo para la cuenta regresiva (año, mes (0-11), día, hora, minuto, segundo)
+    <!-- <script>
         const endDate = new Date('2024-04-13T17:59:59').getTime();
       
-        // Actualizar la cuenta regresiva cada segundo
         const timer = setInterval(function() {
-          // Obtener la fecha y hora actual
           const now = new Date().getTime();
           
-          // Calcular la diferencia entre la fecha objetivo y la fecha actual
           const difference = endDate - now;
           
-          // Calcular los días, horas, minutos y segundos restantes
           const days = Math.floor(difference / (1000 * 60 * 60 * 24));
           const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
           const seconds = Math.floor((difference % (1000 * 60)) / 1000);
           
-          // Mostrar la cuenta regresiva en el elemento con el ID "countdown"
           document.getElementById('countdown').innerHTML = `
                
             ${days} 
             ${hours < 10 ? '0' : ''}${hours} ${minutes < 10 ? '0' : ''}${minutes} ${seconds < 10 ? '0' : ''}${seconds}`;
           
-          // Si la cuenta regresiva llega a cero, detener el temporizador
           if (difference < 0) {
             clearInterval(timer);
             document.getElementById('countdown').innerHTML = '¡Feliz Año Nuevo!';
           }
-        }, 1000); // cada 1 segundo
-      </script>
+        }, 1000); 
+      </script> -->
     
 
     <script>
